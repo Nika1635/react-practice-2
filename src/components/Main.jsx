@@ -1,4 +1,5 @@
 import { useState } from "react"
+import IngredientsList from "./IngredientsList"
 
 export default function Main() {
     const [ingredients, setIngredients] = useState([])
@@ -26,7 +27,7 @@ export default function Main() {
            {ingredients.length > 0 ? 
            <section>
                 <h2>Ingredients on hand:</h2>
-                <ul className="ingredients-list" aria-live="polite">{ingredientsListItems}</ul>
+                <IngredientsList ingredientsListItems={ingredientsListItems}/>
                 {
                 ingredients.length >= 4 && <div className="get-recipe-container">
                     
